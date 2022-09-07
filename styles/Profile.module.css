@@ -1,0 +1,56 @@
+.container_page {
+  height: 85vh;
+}
+
+.title {
+  top: 7.5rem;
+  position: sticky;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: black;
+}
+
+.title h3 {
+  margin-right: 3rem;
+  font-size: 1.3rem;
+  display: inline;
+  color: rgba(106, 197, 233, 0.795);
+}
+.title p {
+  display: inline;
+  color: rgba(106, 197, 233, 0.795);
+}
+
+.content {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+  grid-template-rows: 1.7fr 2.2fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sidebar main main"
+    "sidebar main main"
+    ". . .";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.list {
+  height: 45vh;
+  width: 35vw;
+  background: black;
+  overflow-y: scroll;
+}
+
+.list a {
+  color: rgb(63, 167, 141);
+  padding: 5px;
+  display: block;
+}

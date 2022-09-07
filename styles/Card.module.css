@@ -1,0 +1,27 @@
+.card_body {
+  width: 18rem;
+  background: black;
+}
+
+.buton_card {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0.3rem;
+  background: rgb(29, 28, 28);
+  border: 2px solid rgb(39, 39, 39);
+  border-radius: 10px;
+  color: white;
+}
+
+.buton_card:hover {
+
+  background: rgb(59, 59, 59);
+  transition: 0.5s ease-in-out;
+
+}
+
+.card_body:hover{
+  padding: 5px;
+  box-shadow: 0px 0px 5px 8px #87dada;
+  transition: 0.2s ease-in-out;
+}
