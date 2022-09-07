@@ -1,13 +1,33 @@
 import { Container } from "react-bootstrap";
 
 import { useUser } from "../../context/userContext";
-import { getUser } from "../../services/userService";
+
+// import { getUser } from "../../services/userService";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Profile.module.css";
+import { useEffect, useState } from "react";
 
-const Profile = ({ user }) => {
+const Profile = () => {
   const { userSession, setUserSession } = useUser();
   const { username, email } = userSession;
+  const [data, setData] = useState([])
+
+  const getUserFavorites= async()=> {
+    const request = await fetch("/api/favorites/favorites");
+  //   const request = await axios.get("/api/auth/profile");
+  
+    const resp = await request.json();
+  
+    setData( resp);
+  }
+
+useEffect(() => {
+  getUserFavorites()
+
+
+}, [])
+
+
   return (
     <Layout title="profile">
       <Container className={styles.container_page}>
@@ -20,8 +40,8 @@ const Profile = ({ user }) => {
           <div className={styles.sidebar}>
             <h4>Favoritos</h4>
             <div className={styles.list}>
-              {user &&
-                user.map((element) => (
+              {data &&
+                data.map((element) => (
                   <a key={element.id}>* {element.nombre}</a>
                 ))}
             </div>
@@ -33,14 +53,14 @@ const Profile = ({ user }) => {
   );
 };
 
-export async function getStaticProps() {
-  const res = await getUser();
+// export async function getStaticProps() {
+//   const res = await getUser();
 
-  return {
-    props: {
-      user: res,
-    },
-  };
-}
+//   return {
+//     props: {
+//       user: res,
+//     },
+//   };
+// }
 
 export default Profile;

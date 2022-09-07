@@ -4,7 +4,7 @@ import Router from "next/router";
 
 import { useUser } from "../../context/userContext";
 import { useToast } from "../../context/toastContex";
-import Header from "../../components/ui/Header";
+import Header from "../../components/ui/header";
 import Toast from "../../components/toast";
 import styles from "../../styles/Auth.module.css";
 
