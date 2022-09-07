@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className={styles.container}>
       
-     <Header title="Home"></Header>
+     {/* <Header title="Home"></Header> */}
       <main className={styles.main}>
         <h1 className={styles.title}>Explorador de Arte</h1>
 

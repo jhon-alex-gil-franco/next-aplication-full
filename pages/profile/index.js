@@ -6,8 +6,8 @@ import Layout from "../../components/Layout";
 import styles from "../../styles/Profile.module.css";
 
 const Profile = ({ user }) => {
-  const {userSession, setUserSession}=useUser();
-  const{username,email}=userSession
+  const { userSession, setUserSession } = useUser();
+  const { username, email } = userSession;
   return (
     <Layout title="profile">
       <Container className={styles.container_page}>

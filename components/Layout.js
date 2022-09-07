@@ -1,8 +1,8 @@
-import React, { Children } from "react";
+import React from "react";
 
-import Navigation from "./ui/Navbar.js";
-import Footer from "./ui/Footer.js"
-import Header from "./ui/Header.js"
+import Navigation from "./ui/Navbar";
+import Footer from "./ui/Footer"
+import Header from "./ui/header"
 
 const Layout = ({children, title}) => {
   return (
