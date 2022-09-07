@@ -2,13 +2,13 @@ import Link from "next/link";
 
 import styles from "../styles/Home.module.css";
 import Footer from "../components/ui/Footer";
-import Header from "../components/ui/header";
+import Header from "../components/ui/Header";
 
 function Home() {
   return (
     <div className={styles.container}>
       
-     {/* <Header title="Home"></Header> */}
+     <Header title="Home"></Header>
       <main className={styles.main}>
         <h1 className={styles.title}>Explorador de Arte</h1>
 
