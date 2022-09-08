@@ -1,6 +1,7 @@
 .card_body {
   width: 18rem;
-  background: black;
+  /* background: black; */
+  color:black;
 }
 
 .buton_card {
