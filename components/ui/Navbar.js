@@ -39,7 +39,7 @@ function Navigation() {
           <Nav className={styles.menu}>
             <Link href="/profile">Perfil</Link>
             <Link href="/search">Home</Link>
-            <a onClick={logout}>Cerrar sesión</a>
+            <a className={styles.a} onClick={logout}>Cerrar sesión</a>
           </Nav>
         </Navbar.Collapse>
       </Container>
