@@ -79,7 +79,7 @@ console.log(showToast)
                   ))}
               </select>
               <Button
-                variant="outline-light"
+                variant="outline-success"
                 className={styles.button_select}
                 onClick={handleSearchAutor}
               >
@@ -98,7 +98,7 @@ console.log(showToast)
                   onChange={handleChangeInput}
                 />
                 <Button 
-                variant="outline-light" 
+                variant="outline-success" 
                 className={styles.button_input}
                 onClick={handleSearchTitle}
                 >
