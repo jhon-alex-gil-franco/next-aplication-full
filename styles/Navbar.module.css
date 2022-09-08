@@ -9,6 +9,7 @@
 .navbar a {
   padding: 1rem;
   cursor: pointer;
+  color: aliceblue;
 }
 .menu {
   font-size: 1rem;
