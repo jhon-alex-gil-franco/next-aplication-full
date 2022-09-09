@@ -65,26 +65,29 @@ console.log(showToast)
     <Layout title="search">
       <div className={styles.container}>
         <div className={styles.header}>
+          
           <div className={styles.sidebar}>
             <Container>
+            <div className="d-flex">
               <select
                 onChange={handleChangeSelect}
                 name="select"
                 className={styles.search_select}
               >
-                <option value="null">Autores</option>
+                <option value="null">Busqueda por autor</option>
                 {options &&
                   options.map((element) => (
                     <option key={element.id}>{element.name}</option>
                   ))}
               </select>
               <Button
-                variant="outline-success"
+                variant="success"
                 className={styles.button_select}
                 onClick={handleSearchAutor}
               >
                 Buscar{" "}
               </Button>
+              </div>
             </Container>
           </div>
           <div className={styles.search}>
@@ -98,7 +101,7 @@ console.log(showToast)
                   onChange={handleChangeInput}
                 />
                 <Button 
-                variant="outline-success" 
+                variant="success" 
                 className={styles.button_input}
                 onClick={handleSearchTitle}
                 >
@@ -116,7 +119,7 @@ console.log(showToast)
           <h3 className={styles.subtitle}>Galeria</h3>
        
          
-          <Container className={styles.container_main}>
+          <div className={styles.container_main}>
             {art &&
               art.map((element) => (
                 element.hasImage&&
@@ -131,9 +134,10 @@ console.log(showToast)
                   }}
                 ></Cards>
               ))}
-          </Container>
+          </div>
         </div>
       </div>
+      <br/>
     </Layout>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Link from "next/link";
+import Image from "next/image";
 import axios from "axios";
 
 import { useToast } from "../context/toastContex";
@@ -35,27 +36,30 @@ const Cards = ({ props }) => {
 
   return (
     <>
+ 
+
       <Card className={styles.card_body}>
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" src={img} className={styles.img}/>
         <Card.Body>
-          <Card.Title>{nombre}</Card.Title>
+          <Card.Title className={styles.title}>{nombre}</Card.Title>
           <Card.Text>{"Autor:  " + autor}</Card.Text>
         </Card.Body>
 
         <Card.Body>
           <Link href="#">
-            <button className={styles.buton_card} onClick={handleAddFavorite}>
+            <button className={styles.buton_card_add} onClick={handleAddFavorite}>
               Agregar a favoritos
             </button>
           </Link>
 
           <br />
           <Link href={uri}>
-            <button className={styles.buton_card}>Ir al sitio</button>
+            <button className={styles.buton_card_redirect}>Ir al sitio</button>
           </Link>
          
         </Card.Body>
       </Card>
+      
     </>
   );
 };
